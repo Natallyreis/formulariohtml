@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+form{
+    margin-top: 300px;
+    color: #fefefe;
+    padding: 20px 10px;
+    border-radius: 1px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+}
+.input{
+    width: 300px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: bisque;
+}
+button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fefefe;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+textarea{
+    background-color: blanchedalmond;
+}
+li{
+    list-style: none;
+}
+
+</style>
+
+</head>
+<body>
+    
+    <form action="https://api.sheetmonkey.io/form/orDy13NNzg7DXjog545Heo" method="post">
+        <h1> <font color="blanchedalmond">Dados do Pessoais</font></h1>
+        <p>
+            <label>Digite o seu nome</label>
+            <br>
+            <input  class="input" placeholder="Digite aqui" type="text" required="required" value=""name="nome">
+        </p>
+        <p>
+            <label>Digite o seu CPF</label>
+            <br>
+            <input  class="input" placeholder="000.000.000-00" type="text" required="required" value=""name="nome">
+        </p>
+        <p>
+            <label>Digite o sua Data de Nascimento</label>
+            <br>
+            <input id="date" type="date">
+        </p>
+        <p>
+            <label>Digite o seu Telefone</label>
+            <br>
+            <input  class="input" placeholder="(xx xxxxx-xxxx)" type="text" required="required" value=""name="telefone">
+        </p>
+        <labe>Digite seu Endereço</labe>
+        <br>
+        <input  class="input" placeholder="Estado" type="text" required="required">
+        <input  class="input" placeholder="Cidade" type="text" required="required">
+        <input  class="input" placeholder="00000-000" type="text" required="required">
+        <input  class="input" placeholder="Rua" type="text" required="required">
+        <input  class="input" placeholder="Bairro" type="text" required="required">
+        <input  class="input" placeholder="Número da Residencia" type="text" required="required">
+        </p>
+        <p>
+        <label>Entre com a sua mensagem</label>
+        <textarea rows="10" cols="60" name="mensagem inserida pelo usuário"
+        required="required" placeholder="Digite até 500 caracteres"></textarea>
+        </p>
+        <br>
+        <p>
+            <!---checkbox-->
+            <label>Escolha o(s) modelo(s) de trabalho</label><br>
+            <ol>
+                
+                <li><input class="input" type="checkbox" value="Opç1" name="vlr_presencial">Presencial</li>
+                <li><input class="input"  type="checkbox" value="Opç1" name="vlr_remoto">Remoto</li>
+                <li><input class="input" type="checkbox" checked="checked" value="Opç#" name="vlr_hibrido">Hibrido</li>
+            </ol>
+        </p>
+        <button class="botao" type="submit" value="submit">Enviar Dados</button>
+        <button class="limpar" type="reset">Limpar</button>
+        </form>
+        </form>
+    </form>
+</body>
+</html>
